@@ -1,7 +1,9 @@
 import './App.css';
 
-import Card from './components/Card';
 import Interval from './components/Interval';
+import Sum from './components/Sum';
+import Average from './components/Average';
+import Draw from './components/Draw';
 
 function App() {
   return (
@@ -9,13 +11,13 @@ function App() {
       <h1>Simple Redux</h1>
 
       <div className="line">
-        <Interval>X</Interval>
+        <Interval />
       </div>
 
       <div className="line">
-        <Card title="Card 2" green>Y</Card>
-        <Card title="Card 3" blue>Z</Card>
-        <Card title="Card 4" purple>0</Card>
+        <Sum />
+        <Average />
+        <Draw />
       </div>
     </div>
   );
