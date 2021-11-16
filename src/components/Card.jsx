@@ -4,8 +4,6 @@ import './Card.css'
 
 
 function getColor(props) {
-    console.log(props)
-
     if (props.red) return "Red"
     else if (props.green) return "Green"
     else if (props.blue) return "Blue"
