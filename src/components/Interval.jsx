@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 
 import Card from './Card'
+import { alterMinNumber } from "../store/actions/numbers"
 
 import './Interval.css'
 
@@ -32,4 +33,16 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Interval)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        alterMin(newNumber) {
+            const action = alterMinNumber(newNumber)
+            dispatch(action)
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Interval)
