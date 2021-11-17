@@ -1,4 +1,9 @@
 
+import {
+    ALTER_MIN_NUMBER,
+    ALTER_MAX_NUMBER,
+} from '../actions/actionTypes'
+
 const initialState = {
     min: 0,
     max: 10,
@@ -6,12 +11,12 @@ const initialState = {
 
 const numbersReducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'ALTER_MIN_NUMBER':
+        case ALTER_MIN_NUMBER:
             return {
                 ...state,
                 min: action.payload,
             }
-        case "ALTER_MAX_NUMBER":
+        case ALTER_MAX_NUMBER:
             return {
                 ...state,
                 max: action.payload,
