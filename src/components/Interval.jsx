@@ -14,7 +14,7 @@ const Interval = (props) => {
             <div className="Interval">
                 <span>
                     <strong>Min: </strong>
-                    <input type="number" value={ min } />
+                    <input type="number" value={ min } onChange={(e) => props.alterMin(+e.target.value) } />
                 </span>
 
                 <span>
